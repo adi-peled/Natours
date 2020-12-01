@@ -41,14 +41,21 @@
     }
 
     &--white {
-        background-color: white;
-        color: #777;
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
 
         &::after {
             background-color: #fff;
         }
-
-
     }
 
     // the btn showed up and then animataion work cause delay, fixing it by using animation-fill-mode
