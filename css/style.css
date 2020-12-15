@@ -499,9 +499,36 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
-    height: 50rem;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-    background-color: #fff; }
+    background-color: #fff;
+    border-radius: 3px;
+    display: table;
+    overflow: hidden; }
+  .popup__left {
+    width: 33.3333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.6666666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    padding: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-rule: 1px solid #eee;
+    column-gap: 4rem;
+    hyphens: auto;
+    -moz-column-count: 2;
+    -moz-column-rule: 1px solid #eee;
+    -moz-column-gap: 4rem;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto; }
 
 .header {
   position: relative;
