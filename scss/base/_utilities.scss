@@ -4,10 +4,17 @@
 
 .u-mar-btm-big {
     margin-bottom: 8rem !important;
+   @include respond(tab-port){
+    margin-bottom: 6rem !important;
+   }
+
 }
 
 .u-mar-btm-medium {
     margin-bottom: 4rem !important;
+    @include respond(tab-port){
+        margin-bottom: 3rem !important;
+       }
 }
 
 .u-mar-btm-small {
@@ -15,6 +22,9 @@
 }
 .u-mar-top-big {
     margin-bottom: 8rem !important;
+    @include respond(tab-port){
+        margin-bottom: 6rem !important;
+       }
 }
 .u-mar-top-huge {
     margin-top: 10rem !important;
