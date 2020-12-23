@@ -27,12 +27,20 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%); // work in safary
-        shape-outside: circle(50% at 50% 50%); // works only if element is float, have width and height
-        -webkit-clip-path: circle (50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+
+        overflow: hidden;
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path:polygon(0 0)) {
+            -webkit-clip-path: circle (50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%); // work in safary
+            shape-outside: circle(50% at 50% 50%); // works only if element is float, have width and height
+            border-radius: none;
+        }
+
 
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
